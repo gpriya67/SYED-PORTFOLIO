@@ -18,11 +18,11 @@ const Home = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-black">
 
-      {/* ===== BACKGROUND BASE ===== */}
+     
       <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#053f3a] to-[#020617]" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
 
-      {/* ===== GRID IMAGE ===== */}
+    
       <div
         className="absolute inset-0 opacity-30"
         style={{
@@ -33,10 +33,10 @@ const Home = () => {
         }}
       />
 
-      {/* ===== CONTENT ===== */}
+    
       <div className="relative z-10 min-h-screen px-6 sm:px-10 lg:px-20 pt-28 flex flex-col lg:flex-row items-center justify-between gap-14">
 
-        {/* LEFT TEXT (SPACE RESERVED ALWAYS) */}
+        
         <div
           className={`
             max-w-xl text-center lg:text-left
@@ -54,7 +54,7 @@ const Home = () => {
           </p>
         </div>
 
-        {/* RIGHT IMAGE (ALWAYS VISIBLE) */}
+    
         <div className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[520px] flex-shrink-0">
           <img
             src="/assets/syed.svg"

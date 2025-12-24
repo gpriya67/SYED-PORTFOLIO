@@ -14,7 +14,6 @@ const About = () => {
     >
       <div className="absolute -translate-x-1/2 w-full max-w-[300px] pointer-events-none"></div>
 
-      {/* HEART */}
       <img
         src="/assets/heart.svg"
         alt="heart"
@@ -27,7 +26,6 @@ const About = () => {
         "
       />
 
-      {/* RIGHT BLOB */}
       <img
         src="/assets/Rectangle.svg"
         alt="blob"
@@ -40,8 +38,8 @@ const About = () => {
         "
       />
 
-      {/* TOP GRADIENT */}
-      <div className="
+      <div
+        className="
         absolute
         -right-20 sm:-right-10 md:-right-8 lg:-right-5
         -top-56 sm:-top-64 md:-top-72 lg:-top-80
@@ -49,7 +47,8 @@ const About = () => {
         w-full
         max-w-[400px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px]
         pointer-events-none
-      ">
+      "
+      >
         <img
           src="/assets/skills-rantangale.svg"
           alt="gradient"
@@ -57,7 +56,6 @@ const About = () => {
         />
       </div>
 
-      {/* CONTENT */}
       <div className="relative max-w-[900px] mx-auto text-center z-10">
         <div className="flex justify-center">
           <button
@@ -77,7 +75,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* TEXT */}
       <div className="flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8">
         <p className="text-white text-[16px] sm:text-[18px] md:text-[22px] lg:text-[24px] font-aileron max-w-[723px] leading-relaxed">
           Graphic Designer & Brand Maker with 5+ years of experience, blending
@@ -98,14 +95,11 @@ const About = () => {
           solutions to meet unique business needs with precision and impact.
         </p>
 
-        {/* HR */}
         <hr className="w-40 sm:w-52 md:w-60 border-t-2 border-primary" />
 
-        {/* SPACE AFTER HR */}
         <div className="h-10 sm:h-12 md:h-16" />
       </div>
 
-      {/* BOTTOM DECOR */}
       <img
         src="/assets/Rectangle (1).svg"
         alt="connector"

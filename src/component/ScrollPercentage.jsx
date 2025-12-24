@@ -18,7 +18,7 @@ const ScrollPercentage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Circle math
+
   const radius = 34;
   const circumference = 2 * Math.PI * radius;
   const offset =

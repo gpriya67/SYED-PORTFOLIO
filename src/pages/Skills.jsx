@@ -15,7 +15,6 @@ const Skills = () => {
       id="skills"
       className="relative w-full bg-[#020617] py-20  px-20 overflow-hidden"
     >
-      {/* TOP GRADIENT GLOW */}
       <div className="absolute -top-full -right-72 -translate-x-1/2 w-full max-w-[1100px] pointer-events-none">
         <div className=" w-full">
           <img
@@ -36,17 +35,15 @@ const Skills = () => {
         <img
           src="/assets/skills-rantangale.svg"
           alt="gradient"
-          className="w-full opacity-90" 
+          className="w-full opacity-90"
         />
       </div>
 
-      {/* CONTENT */}
       <div className="relative z-10 max-w-[900px] mx-auto text-center">
-        {/* SKILLS BUTTON */}
         <div className="flex justify-center ">
           <button className="animated-border font-aileron font-normal text-[26px] px-10 py-3 rounded-full text-white mb-10">
-         Skills
-        </button>
+            Skills
+          </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-[10%]">
@@ -60,27 +57,25 @@ const Skills = () => {
         rounded-full
         flex items-center justify-center
 
-        /* GLASS BASE */
+     
         bg-white/15
         backdrop-blur-2xl
         border border-white/25
 
-        /* TEXT */
+      
         text-white
         text-lg
         font-medium
 
-        /* DEPTH */
+      
         shadow-[0_10px_40px_rgba(0,0,0,0.45)]
         overflow-hidden
 
-        /* ANIMATION */
         transition-all duration-300 ease-out
         hover:scale-[1.05]
         hover:shadow-[0_15px_60px_rgba(255,255,255,0.25)]
       "
             >
-              {/* TOP GLASS SHINE */}
               <span
                 className="
           absolute inset-0
@@ -96,7 +91,6 @@ const Skills = () => {
         "
               />
 
-              {/* INNER BORDER */}
               <span
                 className="
           absolute inset-[2px]
@@ -106,7 +100,6 @@ const Skills = () => {
         "
               />
 
-              {/* TEXT */}
               <span className="relative z-10 font-aileron font-bold">
                 {skill}
               </span>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const Testimonials = () => {
   const testimonialData = [
     {
@@ -44,7 +43,6 @@ const Testimonials = () => {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-[#05050F] overflow-hidden">
-      {/* BACKGROUND CIRCLE */}
       <img
         src="/assets/back.svg"
         alt="bg-circle"
@@ -60,29 +58,26 @@ const Testimonials = () => {
     "
       />
 
-      {/* Title */}
       <div className="mt-[10%] z-10">
         <button className="animated-border font-aileron font-normal text-[26px] px-10 py-3 rounded-full text-white mb-10">
           Testimonials
         </button>
       </div>
 
-      {/* Left Arrow */}
       <button
         onClick={handlePrev}
         className="absolute left-20 top-1/2 -translate-y-1/2 w-12 h-12 border border-emerald-400 rounded-full
     flex items-center justify-center text-emerald-400 hover:bg-emerald-400 hover:text-black transition z-10"
       >
-        <img src="/assets/arrow.svg"  alt=""/>
+        <img src="/assets/arrow.svg" alt="arrow" />
       </button>
 
-      {/* Right Arrow */}
       <button
         onClick={handleNext}
         className="absolute right-20 top-1/2 -translate-y-1/2 w-12 h-12 border border-emerald-400 rounded-full
     flex items-center justify-center text-emerald-400 hover:bg-emerald-400 hover:text-black transition z-10"
       >
-        <img src="/assets/left-arrow.svg"  alt=""/>
+        <img src="/assets/left-arrow.svg" alt="arrow" />
       </button>
 
       <div
@@ -95,16 +90,14 @@ const Testimonials = () => {
     flex flex-col items-center justify-center
     text-center text-white
 
-    /* GLASS BASE */
     bg-white/20
     backdrop-blur-2xl
     border border-white/30
 
-    /* DEPTH */
+ 
     shadow-[0_20px_60px_rgba(0,0,0,0.45)]
   "
       >
-        {/* GLASS HIGHLIGHT */}
         <div
           className="
       absolute inset-0 rounded-3xl
@@ -117,7 +110,6 @@ const Testimonials = () => {
     "
         />
 
-        {/* HEART DECOR */}
         <img
           src="/assets/heart-red.svg"
           alt="Heart"
@@ -130,19 +122,16 @@ const Testimonials = () => {
     "
         />
 
-        {/* STARS */}
         <div className="flex gap-2 mb-6 z-10">
           {[...Array(5)].map((_, i) => (
             <img key={i} src="/assets/sta.svg" alt="" className="w-6" />
           ))}
         </div>
 
-        {/* CONTENT */}
         <p className="text-xl md:text-3xl leading-8 md:leading-10 opacity-90 z-10">
           {content}
         </p>
 
-        {/* AUTHOR */}
         <div className="mt-8 z-10">
           <h4 className="text-xl md:text-2xl font-bold font-aileron">
             {title}
@@ -151,16 +140,14 @@ const Testimonials = () => {
         </div>
       </div>
 
-      {/* Background Star */}
       <img
         src="/assets/star-blur.svg"
         className="absolute left-20 top-56 w-[200px] opacity-80 z-0"
-        alt=""
+        alt="start"
       />
 
-      {/* Google Rating */}
       <div className="mt-[10%] flex flex-col items-center text-white z-10">
-        <img src="/assets/google.svg" alt="" />
+        <img src="/assets/google.svg" alt="google" />
       </div>
     </section>
   );
