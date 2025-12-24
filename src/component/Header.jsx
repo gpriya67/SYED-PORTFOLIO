@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import ScrollPercentage from './ScrollPercentage';
 
 const Header = () => {
   const [active, setActive] = useState(1);

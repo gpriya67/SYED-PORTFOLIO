@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaStar, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 
 const Testimonials = () => {
   const testimonialData = [
@@ -73,7 +73,7 @@ const Testimonials = () => {
         className="absolute left-20 top-1/2 -translate-y-1/2 w-12 h-12 border border-emerald-400 rounded-full
     flex items-center justify-center text-emerald-400 hover:bg-emerald-400 hover:text-black transition z-10"
       >
-        <img src="/assets/arrow.svg" />
+        <img src="/assets/arrow.svg"  alt=""/>
       </button>
 
       {/* Right Arrow */}
@@ -82,7 +82,7 @@ const Testimonials = () => {
         className="absolute right-20 top-1/2 -translate-y-1/2 w-12 h-12 border border-emerald-400 rounded-full
     flex items-center justify-center text-emerald-400 hover:bg-emerald-400 hover:text-black transition z-10"
       >
-        <img src="/assets/left-arrow.svg" />
+        <img src="/assets/left-arrow.svg"  alt=""/>
       </button>
 
       <div
@@ -133,7 +133,7 @@ const Testimonials = () => {
         {/* STARS */}
         <div className="flex gap-2 mb-6 z-10">
           {[...Array(5)].map((_, i) => (
-            <img key={i} src="/assets/sta.svg" className="w-6" />
+            <img key={i} src="/assets/sta.svg" alt="" className="w-6" />
           ))}
         </div>
 
@@ -160,7 +160,7 @@ const Testimonials = () => {
 
       {/* Google Rating */}
       <div className="mt-[10%] flex flex-col items-center text-white z-10">
-        <img src="/assets/google.svg" />
+        <img src="/assets/google.svg" alt="" />
       </div>
     </section>
   );

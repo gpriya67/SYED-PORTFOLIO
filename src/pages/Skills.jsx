@@ -36,7 +36,7 @@ const Skills = () => {
         <img
           src="/assets/skills-rantangale.svg"
           alt="gradient"
-          className="w-full opacity-90"
+          className="w-full opacity-90" 
         />
       </div>
 
