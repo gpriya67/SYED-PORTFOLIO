@@ -57,6 +57,12 @@ const Skills = () => {
     return () => clearInterval(intervalRef.current);
   }, [isActive]);
 
+  useEffect(() => {
+  if (data.length > 0) {
+    setIsActive(true);
+  }
+}, [data.length]);
+
   return (
     <>
       <section
