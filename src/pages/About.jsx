@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 
 const About = () => {
   const desktopRef = useRef(null);
@@ -133,7 +133,7 @@ const About = () => {
           </div>
 
           <div className=" absolute -right-20 top-[550px]">
-            <img src="/assets/smile.svg" />
+            <img src="/assets/smile.svg"  alt="smile"/>
           </div>
         </div>
       </section>
