@@ -6,14 +6,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#07D28F',
+        primary: '#07917B',
        
         
       },
       fontFamily: {
         aileron: ["Aileron", "sans-serif"],
         hagrid: ["Hagrid", "sans-serif"],
-        inter:['Inter', 'sans-serif']
+     
+        trial: ['Hagrid-trail', 'sans-serif'],
+        hagridNumber:['Hagrid-Number','sans-serif'],
+        
       },
        
     },

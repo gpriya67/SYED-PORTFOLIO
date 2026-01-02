@@ -18,41 +18,61 @@ const ScrollPercentage = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   const radius = 34;
   const circumference = 2 * Math.PI * radius;
-  const offset =
-    circumference - (scrollPercent / 100) * circumference;
+  const offset = circumference - (scrollPercent / 100) * circumference;
 
   return (
-   <div className="w-20 h-20 relative">
+    <div className="w-[54px] h-[54px] relative flex items-center justify-center  hover:scale-110 cursor-pointer">
+      <div
+        className="
+      absolute inset-0
+      rounded-xl
+      border
+      bg-white/30
+      backdrop-blur-md
+      border-white
+      shadow-[inset_0_0_10px_rgba(255,255,255,0.4),0_8px_20px_rgba(0,0,0,0.25)]
+    "
+      />
+
       <svg
-        className="w-full h-full -rotate-90"
+        className="w-[40px] h-[40px] -rotate-90 relative z-10"
         viewBox="0 0 80 80"
       >
         <circle
           cx="40"
           cy="40"
           r={radius}
-          stroke="#1f2937"
+          stroke="#d1d5db"
           strokeWidth="6"
           fill="none"
         />
+
         <circle
           cx="40"
           cy="40"
           r={radius}
-          stroke="#14f1c0"
+          stroke="#ffffff"
           strokeWidth="6"
           fill="none"
           strokeDasharray={circumference}
           strokeDashoffset={offset}
           strokeLinecap="round"
-          className="transition-all duration-200"
+          className="transition-all duration-300"
         />
       </svg>
 
-      <span className="absolute inset-0 flex items-center justify-center text-white font-semibold">
+      <span
+        className="
+      absolute
+      text-white
+      text-[10px]
+      font-aileron
+      font-normal
+      z-20
+    "
+      >
         {scrollPercent}%
       </span>
     </div>

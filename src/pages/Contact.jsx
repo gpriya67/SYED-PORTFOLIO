@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 
@@ -29,8 +29,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex justify-center items-center py-24 overflow-hidden">
-      <div className="absolute inset-0 opacity-30">
+    <section className="relative w-full  flex justify-center items-center  overflow-hidden mt-[10%] md:mt-[5%]">
+      <div className="absolute  opacity-30">
         <img
           src="/assets/circle.svg"
           alt="grid"
@@ -38,14 +38,11 @@ const Contact = () => {
         />
       </div>
 
-      <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-emerald-400/5 blur-[160px]" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-400/5 blur-[160px]" />
-
-      <div className="relative z-10 w-[95%] max-w-[1200px] rounded-[32px]">
+      <div className="relative z-10 w-[80%] max-w-[1200px] rounded-[32px]">
         <div
-          className="relative backdrop-blur-xl bg-white/5
-          border border-emerald-400/40 rounded-[32px]
-          px-6 md:px-16 py-14"
+          className="relative backdrop-blur-xl 
+            rounded-[32px] animated-border 
+          px-6 md:px-16 py-14 "
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
@@ -59,24 +56,60 @@ const Contact = () => {
                 className="mt-10 space-y-6"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Input label="Your Good Name" name="first_name" />
-                  <Input label="Your Last Name" name="last_name" />
-                  <Input label="Your Phone Number" name="phone" type="tel" />
-                  <Input label="Your Email ID" name="email" type="email" />
+                  <div className=" w-full">
+                    <label className=" block mb-1 text-white font-aileron text-[15px] font-semibold">
+                      Your Good Name:
+                    </label>
+                    <input
+                      type="text"
+                      name="first_name"
+                      className=" rounded-md border border-primary outline-none px-4 py-2 w-full bg-black"
+                      required
+                    />
+                  </div>
+                  <div className=" w-full">
+                    <label className=" block mb-1 text-white font-aileron text-[15px] font-semibold">
+                      Your Last Name:
+                    </label>
+                    <input
+                      type="text"
+                      name="last_name"
+                      className=" rounded-md border border-primary outline-none px-4 py-2 bg-black w-full"
+                      required
+                    />
+                  </div>
+                  <div className=" w-full">
+                    <label className=" block mb-1 text-white font-aileron text-[15px] font-semibold">
+                      Your Email Id:
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      className=" rounded-md border border-primary outline-none px-4 py-2 bg-black w-full"
+                      required
+                    />
+                  </div>
+
+                  <div className=" w-full">
+                    <label className=" block mb-1 text-white font-aileron text-[15px] font-semibold">
+                      Your Phone Number:
+                    </label>
+                    <input
+                      type="text"
+                      name="phone"
+                      className=" rounded-md border border-primary outline-none px-4 py-2 w-full bg-black"
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label className="text-white font-aileron font-normal mb-1 block">
-                    Your Message
+                <div className=" w-full">
+                  <label className=" block mb-1  font-aileron text-[15px] font-semibold  text-white">
+                    Your Message:
                   </label>
                   <textarea
                     name="message"
-                    rows="4"
                     required
-                    className="w-full rounded-md px-4 py-3
-                      border border-emerald-400/40
-                      bg-black/60 text-white outline-none
-                      focus:ring-2 focus:ring-emerald-400/60 transition"
+                    className=" rounded-md border border-primary outline-none px-4 py-10 w-full bg-black"
                   />
                 </div>
 
@@ -84,7 +117,8 @@ const Contact = () => {
                   type="submit"
                   disabled={loading}
                   className="px-10 py-3 rounded-full
-                    bg-emerald-400 text-black font-semibold
+                  font-aileron
+                    bg-primary  text-white  font-semibold
                     hover:scale-105 transition disabled:opacity-50"
                 >
                   {loading ? "Sending..." : "Send Message"}
@@ -105,20 +139,5 @@ const Contact = () => {
     </section>
   );
 };
-
-const Input = ({ label, name, type = "text" }) => (
-  <div className="flex flex-col">
-    <label className="text-white text-sm mb-1">{label}</label>
-    <input
-      type={type}
-      name={name}
-      required
-      className="rounded-md px-4 py-2
-        bg-black/60 text-white outline-none
-        border border-emerald-400/40
-        focus:ring-2 focus:ring-emerald-400/60 transition font-aileron font-normal"
-    />
-  </div>
-);
 
 export default Contact;
