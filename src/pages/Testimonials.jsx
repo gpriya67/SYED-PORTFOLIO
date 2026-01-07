@@ -209,7 +209,7 @@ const Testimonials = () => {
           <div className="relative flex justify-center items-center w-full mt-10">
             <button
               onClick={handlePrev}
-              className="absolute left-0 z-20 w-10 h-10 flex justify-center items-center"
+              className="absolute left-0 z-20 w-3 h-3 flex justify-center items-center"
             >
               <img src="/assets/arrow.svg" alt="prev" />
             </button>
@@ -218,10 +218,10 @@ const Testimonials = () => {
               <img
                 src="/assets/heart-red.svg"
                 alt="heart"
-                className="absolute w-[80px] -right-8 -top-7 heart-beat"
+                className="absolute w-[70px] -right-5 -top-5 heart-beat"
               />
 
-              <div className="relative z-10 w-[400px] h-[250px] bg-gradient-to-r from-white/20 backdrop-blur-none to-transparent border border-white rounded-3xl p-6 flex flex-col justify-between shadow-[inset_0_0_30px_rgba(255,255,255,0.25)]  shadow-white">
+              <div className="relative z-10 w-[300px] h-[200px] bg-gradient-to-r from-white/20 backdrop-blur-none to-transparent border border-white rounded-3xl p-6 flex flex-col justify-between shadow-[inset_0_0_30px_rgba(255,255,255,0.25)]  shadow-white">
                 <div className="flex justify-center items-center ">
                   <div className="flex gap-1  justify-center items-center">
                     {[...Array(5)].map((_, i) => (
@@ -235,16 +235,16 @@ const Testimonials = () => {
                   </div>
                 </div>
 
-                <div className="absolute w-[400px] h-[300px] flex flex-col items-center  text-center p-3 left-1/2 -translate-x-1/2">
-                  <p className="text-[15px]  font-aileron font-normal  leading-6 mt-5">
+                <div className="absolute w-[300px] h-[200px] flex flex-col items-center  text-center p-3 left-1/2 -translate-x-1/2">
+                  <p className="text-[10px]  font-aileron font-normal leading-4 mt-5">
                     {currentTestimonial.content}
                   </p>
                   <div className=" fixed top-36">
-                    <div className=" leading-none mt-10">
-                      <p className="font-bold font-aileron leading-none text-[10px] uppercase">
+                    <div className=" leading-none ">
+                      <p className="font-bold font-aileron leading-none text-[8px] uppercase">
                         {currentTestimonial.title}
                       </p>
-                      <span className="text-[10px] font-normal leading-none font-aileron">
+                      <span className="text-[8px] font-normal leading-none font-aileron">
                         {currentTestimonial.work}
                       </span>
                     </div>
@@ -255,19 +255,19 @@ const Testimonials = () => {
               <img
                 src="/assets/star-blur.svg"
                 alt="star"
-                className="hidden lg:block absolute -left-32 -top-32 w-[200px]"
+                className="  absolute -top-40  -left-8 w-[100px]"
               />
             </div>
 
             <button
               onClick={handleNext}
-              className="absolute right-0 z-20 w-10 h-10 flex justify-center items-center"
+              className="absolute right-0 z-20 w-3 h-3 flex justify-center items-center"
             >
               <img src="/assets/left-arrow.svg" alt="next" />
             </button>
           </div>
 
-          <div className="mb-10 mt-5 w-[140px] sm:w-[180px] md:w-[200px]">
+          <div className="mb-10 mt-5 w-[100px] sm:w-[180px] md:w-[200px]">
             <img
               src="/assets/google.svg"
               alt="google"

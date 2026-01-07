@@ -7,8 +7,8 @@ const FloatingImage = () => {
         className="
           absolute
           left-6 sm:left-16 md:left-28 lg:left-36
-          -top-[220px] sm:-top-[300px] md:-top-[360px] lg:-top-[400px]
-          w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px]
+          -top-[100px] sm:-top-[300px] md:-top-[360px] lg:-top-[400px]
+          w-[100px] sm:w-[200px] md:w-[240px] lg:w-[280px]
           opacity-90
         "
       />

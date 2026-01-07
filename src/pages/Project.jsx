@@ -22,7 +22,7 @@ const Project = () => {
           className="absolute right-0 top-[90%] md:top-[800px] -translate-y-1/2 w-[500px] sm:w-[800px] opacity-90 pointer-events-none"
         />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-10">
+        <div className="relative z-10 max-w-5xl  md:max-w-7xl mx-auto px-4 sm:px-10">
           <div className="flex flex-col sm:flex-row gap-10 justify-center   md:mb-24 mt-[5%]">
             {[
               { img: "/assets/border-2.svg", title: "Logos" },
@@ -34,7 +34,9 @@ const Project = () => {
                   <img src="/assets/border.svg" alt="border" />
                   <img
                     src={item.img}
-                    className="absolute  top-5 left-7 md:top-5 md:left-6"
+                    className="absolute top-5 left-6  md:top-6 md:left-6  
+    hover:scale-90
+    transition-transform duration-300 ease-out"
                     alt="item"
                   />
                 </div>

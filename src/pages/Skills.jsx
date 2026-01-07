@@ -58,10 +58,10 @@ const Skills = () => {
   }, [isActive]);
 
   useEffect(() => {
-  if (data.length > 0) {
-    setIsActive(true);
-  }
-}, [data.length]);
+    if (data.length > 0) {
+      setIsActive(true);
+    }
+  }, [data.length]);
 
   return (
     <>
@@ -182,7 +182,7 @@ const Skills = () => {
           />
         </div>
 
-        <div className="relative z-20 w-[350px] mx-auto text-center ">
+        <div className="relative z-20  mx-auto text-center ">
           <div className="flex justify-center items-center">
             <button
               className="
@@ -200,31 +200,27 @@ const Skills = () => {
           <div className="flex justify-center">
             <div
               className="
-              grid grid-cols-1 sm:grid-cols-2
-              gap-4 sm:gap-5 md:gap-6
-              w-full max-w-[800px]
-             
-              font-aileron font-bold
-              text-[18px]  mt-[20%]
-               transform transition-transform duration-300 ease-out
-         
-            "
+      grid grid-cols-1 sm:grid-cols-2
+      gap-4 sm:gap-5 md:gap-6
+      w-full max-w-[400px] md:max-w-[800px] mx-auto
+      font-aileron font-bold
+      text-[14px] mt-[20%]
+      transform transition-transform duration-300 ease-out
+    "
             >
               {data.map((skill, i) => (
                 <div
                   key={i}
-                  className={` skill-item
-                ${i < visibleCount ? "show" : ""}
-                    text-white text-center
-                  px-4 sm:px-6 py-2.5 sm:py-3
-                  rounded-full
-                  backdrop-blur-none
-                  bg-gradient-to-r
-          from-white/20
-          to-white/10
-                  border border-white
-                 
-                  transition hover:scale-105  card cursor-pointer shadow-[inset_0_0_30px_rgba(255,255,255,0.25)]  shadow-white`}
+                  className={`skill-item ${i < visibleCount ? "show" : ""} 
+          text-white text-center
+          px-4 sm:px-6 py-2.5 sm:py-3
+          rounded-full
+          backdrop-blur-none
+          bg-gradient-to-r from-white/20 to-white/10
+          border border-white
+          transition hover:scale-105 cursor-pointer
+          shadow-[inset_0_0_30px_rgba(255,255,255,0.25)] shadow-white
+        `}
                 >
                   {skill}
                 </div>

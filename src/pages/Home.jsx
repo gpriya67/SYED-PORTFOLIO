@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="px-4 md:px-0 md:relative  overflow-hidden w-full bg-black ">
+    <section className="  md:relative  overflow-hidden w-full bg-black ">
       <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#053f3a] to-[#020617]" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
 
@@ -62,7 +62,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="relative z-10 px-4 mx-auto pt-40 flex flex-col items-center text-center md:hidden">
+      <div className="relative z-10  mx-auto pt-40 flex flex-col items-center text-center md:hidden">
         <div
           className={`
       max-w-xl
@@ -72,7 +72,7 @@ const Home = () => {
       transition-all
       duration-700
       ease-out
-      ${showText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+     
     `}
         >
           <div className="w-[250px] mx-auto">

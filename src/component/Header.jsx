@@ -1,49 +1,56 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import ScrollPercentage from "./ScrollPercentage";
 
-
 const Header = () => {
   const [active, setActive] = useState(1);
   const [open, setOpen] = useState(false);
-   const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItem = [
     { id: 1, name: "Home", path: "/" },
     { id: 2, name: "About", path: "about" },
-    { id: 3, name: "Skills", path: "skils" },
-    { id: 4, name: "Testimonials", path: "testimonals" },
-    { id: 5, name: "Project", path: "project" },
+    { id: 3, name: "Skills", path: "skills" },
+    { id: 4, name: "Testimonials", path: "testimonials" },
+    { id: 5, name: "Portfolio", path: "project" },
     { id: 6, name: "Contact", path: "contact" },
   ];
 
   useEffect(() => {
-      const handleScroll = () => {
-        setScrolled(window.scrollY > 50);
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-  
+    const onScroll = () => {
+      const y =
+        window.scrollY ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+
+      setScrolled(y > 20);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-4 left-0 w-full z-50 flex justify-center  md:px-20   ">
-         <div
-          className={`absolute md:top-[-20px] left-0 w-full transition-all duration-500 ease-out pointer-events-none mt-0
-      ${
-        scrolled
-          ? "h-60 bg-gradient-to-b from-white/50 via-black to-transparent"
-          : "h-0"
-      }`}
+      <header className="fixed top-4 left-0 w-full z-50 flex justify-center px-4  md:px-20   ">
+        <div
+          className={`absolute md:top-[-20px] left-0 w-full pointer-events-none
+    transition-all duration-500 ease-out
+    ${
+      scrolled
+        ? "h-40 bg-gradient-to-b from-black/80 via-black/50 to-transparent"
+        : "h-0"
+    }
+  `}
         />
+
         <div
           className="
-          relative flex justify-center items-center w-full  md:max-w-[1300px]  py-2
+          relative flex justify-center items-center w-full  md:max-w-[1300px]  
           text-white
-          md:px-10 md:py-4 rounded-full
+          md:px-10 md:py-4  px-6 py-3 rounded-full
           backdrop-blur-none  border-2 border-white
             bg-gradient-to-r from-white/20 to-transparent  shadow-[inset_0_0_30px_rgba(20,20,20,0.20)]  shadow-white
         "
@@ -120,7 +127,7 @@ const Header = () => {
           </div>
         )}
 
-        <div className="fixed bottom-6 left-0 w-full z-40 ">
+        <div className="fixed bottom-6 left-0 w-full z-40 px-4 md:px-20">
           <div className="flex justify-between items-center mx-auto">
             <ScrollPercentage />
 
@@ -129,7 +136,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div className="w-[30px] h-[30px] md:w-[54px] md:h-[54px]">
+              <div className="w-[54px] h-[54px]">
                 <img
                   src="/assets/whatapp.svg"
                   alt="WhatsApp"
@@ -139,8 +146,6 @@ const Header = () => {
             </a>
           </div>
         </div>
-
-         
       </header>
     </>
   );

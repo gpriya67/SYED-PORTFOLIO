@@ -1,4 +1,3 @@
-import React from "react";
 import Counter from "../component/Counter";
 
 const CounterNumber = () => {
@@ -108,8 +107,8 @@ const CounterNumber = () => {
               key={index}
               className="
         relative rounded-3xl overflow-hidden
-        w-[150px] h-[120px]
-        sm:w-[100px] sm:h-[100px]
+        w-[90px] h-[90px]
+      
         borde 
           borde border-white shadow-[inset_0_0_30px_rgba(255,255,255,0.25)]  shadow-white border-2   bg-gradient-to-r
           from-white/20
@@ -126,7 +125,7 @@ const CounterNumber = () => {
               />
 
               <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-2">
-                <p className="text-white text-[15px] sm:text-[16px] leading-tight font-aileron">
+                <p className="text-white text-[10px] leading-tight font-aileron">
                   {item.label.split(" ").map((word, i) => (
                     <span key={i}>
                       {word}
@@ -135,7 +134,7 @@ const CounterNumber = () => {
                   ))}
                 </p>
 
-                <p className="text-[#13b593] text-4xl sm:text-4xl font-bold font-aileron mt-1">
+                <p className="text-[#13b593] text-2xl sm:text-4xl font-bold font-aileron mt-1">
                   <Counter end={item.value} duration={2000} />+
                 </p>
               </div>

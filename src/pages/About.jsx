@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const About = () => {
   const desktopRef = useRef(null);
@@ -133,7 +133,7 @@ const About = () => {
           </div>
 
           <div className=" absolute -right-20 top-[550px]">
-            <img src="/assets/smile.svg"  alt="smile"/>
+            <img src="/assets/smile.svg" alt="smile" />
           </div>
         </div>
       </section>
@@ -152,7 +152,7 @@ const About = () => {
           alt="heart"
           className="
       absolute z-20 pointer-events-none animate-drift
-      left-24
+      left-5
       top-20 
       w-[40px] 
     "
@@ -200,7 +200,7 @@ const About = () => {
 
           <div className="flex flex-col items-center text-center space-y-6 sm:space-y-7 md:space-y-8">
             <p
-              className="text-white text-[16px] sm:text-[18px] md:text-[27px] font-aileron font-normal  leading-[1.8] delay-1  reveal-text
+              className="text-white text-[12px] sm:text-[18px] md:text-[27px] font-aileron font-normal  leading-4  delay-1  reveal-text
             max-w-[723px]"
             >
               Graphic Designer & Brand Maker with 5+ years of experience,
@@ -209,7 +209,7 @@ const About = () => {
             </p>
 
             <p
-              className="text-white text-[16px] sm:text-[18px] md:text-[27px] font-aileron font-normal   leading-[1.8] delay-2  reveal-text
+              className="text-white text-[12px] sm:text-[18px] md:text-[27px] font-aileron font-normal   leading-4 delay-2  reveal-text
             max-w-[723px]"
             >
               Passionate about visual storytelling, I specialize in branding,
@@ -219,7 +219,7 @@ const About = () => {
             </p>
 
             <p
-              className="text-white text-[16px] sm:text-[18px] md:text-[27px] font-aileron font-normal  leading-[1.8] delay-3  reveal-text
+              className="text-white text-[12px] sm:text-[18px] md:text-[27px] font-aileron font-normal  leading-4 delay-3  reveal-text
             max-w-[723px]"
             >
               I also design and develop modern, responsive websites, focusing on

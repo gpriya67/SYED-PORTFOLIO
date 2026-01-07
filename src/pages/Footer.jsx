@@ -65,13 +65,13 @@ const Footer = () => {
   ];
 
   return (
-    <div className="flex justify-center items-center flex-col mt-[5%]">
+    <div className="flex justify-center items-center flex-col mt-[3%]">
       <footer className="relative w-full bg-[#05050F] overflow-hidden ">
         <div className="absolute w-full top-0 left-0 overflow-hidden">
           <img
             src="/assets/foter.svg"
             alt="curve"
-            className="w-full py-4 rounded-full animate-bottom-top"
+            className="w-full py-4 rounded-full "
           />
         </div>
 
@@ -168,31 +168,35 @@ const Footer = () => {
             flex flex-col md:flex-row gap-4 md:gap-0 
             justify-between text-[14px] md:text-[16px] text-white"
           >
-            <span className="text-center md:text-left font-hagrid font-normal text-[15px]">
-              <span className="text-primary font-hagrid font-normal text-[15px]">
+            <span className="text-center md:text-left font-aileron font-normal text-[15px]">
+              <span className="text-primary font-aileron font-normal text-[15px]">
                 Copyright ©{" "}
               </span>
               designer syed Irfan. All rights reserved.
             </span>
 
-            <span className="flex justify-center md:justify-end font-hagrid font-normal gap-1 items-center text-[15px]">
-              Designed with
-              <div className=" w-3 h-3 mt-1">
+            <div className="relative z-[999] flex justify-center md:justify-end items-center gap-1 text-[15px] font-aileron">
+              <span>Designed with</span>
+
+              <span className="w-3 h-3 inline-flex">
                 <img
                   src="/assets/BRAND SPARK HEARD (1).svg"
                   alt="brand"
-                  className=" w-full h-auto object-cover"
+                  className="w-full h-auto"
                 />
-              </div>
-              <a
-                href="https://brandspark.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary  hover:underline font-hagrid font-normal text-[15px] cursor-pointer"
+              </span>
+
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open("https://brandspark.in/", "_blank");
+                }}
+                className="text-primary hover:underline cursor-pointer bg-transparent border-none p-0 font-aileron"
               >
                 Brand Spark
-              </a>
-            </span>
+              </button>
+            </div>
           </div>
         </div>
       </footer>
